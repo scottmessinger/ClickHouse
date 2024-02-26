@@ -5,7 +5,7 @@ import logging
 import os
 import sys
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict
 
 from ci_config import CI_CONFIG
 from env_helper import (
