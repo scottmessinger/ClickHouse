@@ -189,6 +189,16 @@ def main():
         )
         print("::notice ::Cannot run")
         sys.exit(1)
+    else:
+        # re-set "PR check" status to success to overwrite previous failure if any
+        post_commit_status(
+            commit,
+            SUCCESS,
+            "",
+            "ok",
+            PR_CHECK,
+            pr_info,
+        )
 
     post_commit_status(
         commit,
